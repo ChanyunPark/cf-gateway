@@ -7,14 +7,7 @@ plugins {
 
 group = 'koscom.cf'
 version = '0.0.1'
-
-compileJava {
-    options.encoding = 'UTF-8'
-    sourceCompatibility = '11'
-    targetCompatibility = '11'
-    options.fork = true
-    options.forkOptions.executable = "/usr/lib/jvm/java-11-openjdk-amd64/bin/javac"
-}
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
