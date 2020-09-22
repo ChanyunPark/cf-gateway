@@ -9,8 +9,16 @@ group = 'koscom.cf'
 version = '0.0.1'
 sourceCompatibility = '11'
 
-compileJava.options.fork = true
-compileJava.options.forkOptions.executable = '/usr/lib/jvm/java-11-openjdk-amd64/bin/javac'
+compileJava {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = 11
+    targetCompatibility = 11
+    options.compilerArgs << "-parameters"
+    options.compilerArgs << "--release" << "11"
+    options.compilerArgs << "--enable-preview"
+    options.fork = true
+    options.forkOptions.executable = "/usr/lib/jvm/java-11-openjdk-amd64/bin/javac"
+}
 
 repositories {
     mavenCentral()
