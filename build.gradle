@@ -9,6 +9,9 @@ group = 'koscom.cf'
 version = '0.0.1'
 sourceCompatibility = '11'
 
+compileJava.options.fork = true
+compileJava.options.forkOptions.executable = /usr/lib/jvm/java-11-openjdk-amd64/bin
+
 repositories {
     mavenCentral()
 }
